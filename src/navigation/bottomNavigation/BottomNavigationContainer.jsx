@@ -9,13 +9,48 @@ import OffersContainer from './OffersContainer';
 const Tab = createBottomTabNavigator();
 
 const BottomNavigationContainer = () => {
+  const getTabBarVisible = route => {
+    const visible = route.state ? route.state.index : 0;
+    return !visible;
+  };
+
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeContainer} />
-      <Tab.Screen name="Search" component={SearchContainer} />
-      <Tab.Screen name="Offers" component={OffersContainer} />
-      <Tab.Screen name="Categories" component={CategoriesContainer} />
-      <Tab.Screen name="Cart" component={CartContainer} />
+      <Tab.Screen
+        options={({route}) => ({
+          tabBarVisible: getTabBarVisible(route),
+        })}
+        name="Home"
+        component={HomeContainer}
+      />
+      <Tab.Screen
+        options={({route}) => ({
+          tabBarVisible: getTabBarVisible(route),
+        })}
+        name="Search"
+        component={SearchContainer}
+      />
+      <Tab.Screen
+        options={({route}) => ({
+          tabBarVisible: getTabBarVisible(route),
+        })}
+        name="Offers"
+        component={OffersContainer}
+      />
+      <Tab.Screen
+        options={({route}) => ({
+          tabBarVisible: getTabBarVisible(route),
+        })}
+        name="Categories"
+        component={CategoriesContainer}
+      />
+      <Tab.Screen
+        options={({route}) => ({
+          tabBarVisible: getTabBarVisible(route),
+        })}
+        name="Cart"
+        component={CartContainer}
+      />
     </Tab.Navigator>
   );
 };

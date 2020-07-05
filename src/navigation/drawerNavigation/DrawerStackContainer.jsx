@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import Offers from '../../drawer/Offers';
+import Offers from '../../screens/drawer/Offers';
 
 const Stack = createStackNavigator();
 
