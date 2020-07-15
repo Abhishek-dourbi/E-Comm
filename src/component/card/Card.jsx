@@ -28,6 +28,9 @@ const Card = () => {
 
   return (
     <View style={cardStyles.container}>
+      <View style={cardStyles.exemptionContainer}>
+        <Text style={cardStyles.exemptionText}>43% {'\n'} Off</Text>
+      </View>
       <View style={cardStyles.itemContainer}>
         <View style={cardStyles.imageContainer}>
           <Image
@@ -54,6 +57,7 @@ const Card = () => {
           inputContainerStyle={cardStyles.dropDownInputContainer}
           rippleOpacity={0}
           useNativeDriver
+          dropdownMargins={{min: 8, max: 16}}
           renderAccessory={value => (
             <View
               style={

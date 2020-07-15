@@ -75,4 +75,14 @@ export const dashboardStyles = EStyleSheet.create({
   offerSliderContainer: {
     marginVertical: '10rem',
   },
+  featuredContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: '20rem',
+  },
+  featuredImage: {
+    width: '90%',
+    height: '200rem',
+    borderRadius: '20rem',
+  },
 });

@@ -10,4 +10,5 @@ export default {
   firstYellowGradientColor: '#ebb434',
   secondYellowGradientColor: '#ebdc34',
   lightYellow: '#fff9b6',
+  lightGreen: '#10cd00',
 };

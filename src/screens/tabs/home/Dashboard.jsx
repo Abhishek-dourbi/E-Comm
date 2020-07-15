@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   TextInput,
+  Image,
 } from 'react-native';
 import Colors from '../../../utils/Colors';
 import LinearGradient from 'react-native-linear-gradient';
@@ -62,8 +63,21 @@ const Dashboard = props => {
         </View>
       </View>
       <ScrollView>
+        <View
+          style={dashboardStyles.featuredContainer}>
+          <Image
+            source={{
+              uri: 'https://cpimg.tistatic.com/03566177/b/4/Kurkure.jpg',
+            }}
+            style={dashboardStyles.featuredImage}
+            resizeMode="cover"
+          />
+        </View>
         <View style={dashboardStyles.offerSliderContainer}>
           <Slider label="Best Offers" />
+        </View>
+        <View style={dashboardStyles.offerSliderContainer}>
+          <Slider label="Best Seller" />
         </View>
       </ScrollView>
     </SafeAreaView>
