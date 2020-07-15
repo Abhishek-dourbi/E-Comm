@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import {drawerComponentStyles} from './DrawerComponent.styles';
 import LinearGradient from 'react-native-linear-gradient';
@@ -37,7 +37,7 @@ const options = [
 
 const DrawerComponent = props => {
   return (
-    <DrawerContentScrollView {...props}>
+    <ScrollView {...props}>
       <LinearGradient
         start={{x: 0, y: 0}}
         end={{x: 1, y: 0}}
@@ -105,7 +105,7 @@ const DrawerComponent = props => {
           </View>
         </TouchableOpacity>
       ))}
-    </DrawerContentScrollView>
+    </ScrollView>
   );
 };
 
