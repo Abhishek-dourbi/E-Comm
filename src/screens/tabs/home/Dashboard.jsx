@@ -14,11 +14,12 @@ import {dashboardStyles} from './Dashboard.styles';
 import {drawerComponentStyles} from '../../drawer/DrawerComponent/DrawerComponent.styles';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Slider from '../../../component/slider/Slider';
 
 const Dashboard = props => {
   return (
     <SafeAreaView style={dashboardStyles.container}>
-      <ScrollView>
+      <View style={dashboardStyles.headerContainer}>
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 0}}
@@ -27,7 +28,7 @@ const Dashboard = props => {
             Colors.secondBlueGradientColor,
             Colors.thirdBlueGradientColor,
           ]}
-          style={dashboardStyles.headerContainer}>
+          style={dashboardStyles.header}>
           <View style={dashboardStyles.headerLeft}>
             <TouchableOpacity onPress={() => props.navigation.openDrawer()}>
               <Entypo name="menu" style={dashboardStyles.menuIcon} />
@@ -57,10 +58,12 @@ const Dashboard = props => {
             placeholder="Search(e.g, atta, salt, surf)"
             returnKeyType="search"
           />
-            <AntDesign
-                style={dashboardStyles.searchIcon}
-                name="search1"
-            />
+          <AntDesign style={dashboardStyles.searchIcon} name="search1" />
+        </View>
+      </View>
+      <ScrollView>
+        <View style={dashboardStyles.offerSliderContainer}>
+          <Slider label="Best Offers" />
         </View>
       </ScrollView>
     </SafeAreaView>

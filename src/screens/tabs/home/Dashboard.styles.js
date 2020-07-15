@@ -7,6 +7,9 @@ export const dashboardStyles = EStyleSheet.create({
     backgroundColor: Colors.lightGray,
   },
   headerContainer: {
+    marginBottom: '25rem',
+  },
+  header: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -51,7 +54,6 @@ export const dashboardStyles = EStyleSheet.create({
     paddingHorizontal: '15rem',
     backgroundColor: Colors.searchBarColor,
     flexDirection: 'row',
-    // marginHorizontal: '20rem',
     position: 'absolute',
     bottom: '-20rem',
     height: '40rem',
@@ -69,5 +71,8 @@ export const dashboardStyles = EStyleSheet.create({
   searchBar: {
     flex: 1,
     padding: 0,
+  },
+  offerSliderContainer: {
+    marginVertical: '10rem',
   },
 });

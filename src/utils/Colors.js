@@ -3,9 +3,10 @@ export default {
   white: '#fff',
   lightGray: '#D3D3D3',
   searchBarColor: '#f4f1f1',
-  firstBlueGradientColor: '#1820A8',
-  secondBlueGradientColor: '#0364B6',
+  firstBlueGradientColor: '#3624a8',
+  secondBlueGradientColor: '#0b38b6',
   thirdBlueGradientColor: '#08B8C5',
   firstYellowGradientColor: '#ebb434',
   secondYellowGradientColor: '#ebdc34',
+  lightYellow: '#fff9b6',
 };
