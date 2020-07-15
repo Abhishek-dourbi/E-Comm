@@ -1,8 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {cardStyles} from './Card.styles';
+import {Dropdown} from 'react-native-material-dropdown-v2';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
+let data = [
+  {
+    label: '200gm',
+    value: '200',
+  },
+  {
+    label: '500gm',
+    value: '500',
+  },
+  {
+    label: '1kg',
+    value: '1000',
+  },
+];
 
 const Card = () => {
+  const [option, setOption] = useState('');
+
+  const onOptionChange = () => {
+    setOption(option);
+  };
+
   return (
     <View style={cardStyles.container}>
       <View style={cardStyles.itemContainer}>
@@ -22,6 +45,35 @@ const Card = () => {
           </View>
           <Text style={cardStyles.itemLabel}>Toor Dal</Text>
         </View>
+      </View>
+      <View>
+        <Dropdown
+          value={option}
+          onChangeOption={onOptionChange}
+          data={data}
+          inputContainerStyle={cardStyles.dropDownInputContainer}
+          rippleOpacity={0}
+          useNativeDriver
+          renderAccessory={value => (
+            <View
+              style={
+                value
+                  ? cardStyles.dropDownContainer
+                  : cardStyles.dropDownUnselectedContainer
+              }>
+              <Text
+                style={
+                  value ? cardStyles.dropDownText : cardStyles.unselectedText
+                }>
+                {value ? value : 'Qty'}
+              </Text>
+              <AntDesign name="caretdown" style={cardStyles.dropDownIcon} />
+            </View>
+          )}
+          renderBase={props => (
+            <View>{props.renderAccessory(props.title)}</View>
+          )}
+        />
       </View>
       <View style={cardStyles.buttonContainer}>
         <TouchableOpacity style={cardStyles.cartButton}>
