@@ -24,6 +24,7 @@ export const dashboardStyles = EStyleSheet.create({
   headerRight: {
     flex: 0.5,
     alignItems: 'center',
+    height: '100%',
   },
   userIconContainer: {
     marginRight: 0,
@@ -63,6 +64,7 @@ export const dashboardStyles = EStyleSheet.create({
     shadowOffset: {width: '5rem', height: '5rem'},
     shadowColor: 'black',
     shadowOpacity: 0.3,
+    elevation: '15rem',
   },
   searchIcon: {
     color: Colors.black,

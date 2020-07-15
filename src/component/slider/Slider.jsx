@@ -15,7 +15,12 @@ const Slider = ({label}) => {
   return (
     <View style={sliderStyles.container}>
       <Text style={sliderStyles.labelText}>{label}</Text>
-      <FlatList keyExtractor={(item, index) => index.toString()} horizontal data={Array(10).fill(0)} renderItem={renderItem} />
+      <FlatList
+        keyExtractor={(item, index) => index.toString()}
+        horizontal
+        data={Array(10).fill(0)}
+        renderItem={renderItem}
+      />
     </View>
   );
 };
