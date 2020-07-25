@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   Image,
+  StatusBar
 } from 'react-native';
 import Colors from '../../../utils/Colors';
 import LinearGradient from 'react-native-linear-gradient';

@@ -2,6 +2,9 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import Colors from '../../../utils/Colors';
 
 export const drawerComponentStyles = EStyleSheet.create({
+  drawer: {
+    paddingTop: 0,
+  },
   optionContainer: {
     flexDirection: 'row',
     paddingVertical: '20rem',
