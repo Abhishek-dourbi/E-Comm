@@ -1,5 +1,6 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Colors from '../../../utils/Colors';
+import {GenericStyles} from '../../../utils/GenericStyles';
 
 export const dashboardStyles = EStyleSheet.create({
   container: {
@@ -61,10 +62,7 @@ export const dashboardStyles = EStyleSheet.create({
     zIndex: 100,
     width: '85%',
     alignSelf: 'center',
-    shadowOffset: {width: '5rem', height: '5rem'},
-    shadowColor: 'black',
-    shadowOpacity: 0.3,
-    elevation: '15rem',
+    ...GenericStyles.boxShadow,
   },
   searchIcon: {
     color: Colors.black,
@@ -81,6 +79,7 @@ export const dashboardStyles = EStyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: '20rem',
+    ...GenericStyles.boxShadow,
   },
   featuredImage: {
     width: '90%',

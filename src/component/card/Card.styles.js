@@ -90,6 +90,7 @@ export const cardStyles = EStyleSheet.create({
     borderWidth: '1rem',
     borderColor: Colors.gray,
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'space-around',
   },
   dropDownText: {
