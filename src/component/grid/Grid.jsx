@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {View, Text} from 'react-native';
 import CategoryCard from '../card/CategoryCard';
 import {gridStyles} from './Grid.styles';
 import {sliderStyles} from '../slider/Slider.styles';
 
-const Grid = ({data, label}) => {
+const Grid = memo(({data, label}) => {
   const renderItem = item => {
     return <CategoryCard item={item} />;
   };
@@ -15,6 +15,6 @@ const Grid = ({data, label}) => {
       <View style={gridStyles.gridContainer}>{data.map(renderItem)}</View>
     </View>
   );
-};
+});
 
 export default Grid;

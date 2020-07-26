@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {View, Text, FlatList} from 'react-native';
 import {sliderStyles} from './Slider.styles';
 import Card from '../card/ItemCard';
 
-const Slider = ({label, data}) => {
+const Slider = memo(({label, data}) => {
   const renderItem = () => {
     return (
       <View style={sliderStyles.cardContainer}>
@@ -23,6 +23,6 @@ const Slider = ({label, data}) => {
       />
     </View>
   );
-};
+});
 
 export default Slider;

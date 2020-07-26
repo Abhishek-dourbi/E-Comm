@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   TextInput,
   Image,
-  StatusBar,
 } from 'react-native';
 import Colors from '../../../utils/Colors';
 import LinearGradient from 'react-native-linear-gradient';
@@ -20,6 +19,16 @@ import Slider from '../../../component/slider/Slider';
 import Grid from '../../../component/grid/Grid';
 
 const Dashboard = props => {
+  const [categoryData, setCategoryData] = useState([]);
+  const [offersData, setOffersData] = useState([]);
+  const [sellersData, setSellersData] = useState([]);
+
+  useEffect(() => {
+    setCategoryData(Array(6).fill(0));
+    setOffersData(Array(10).fill(0));
+    setSellersData(Array(10).fill(0));
+  }, []);
+
   return (
     <SafeAreaView style={dashboardStyles.container}>
       <View style={dashboardStyles.headerContainer}>
@@ -75,13 +84,13 @@ const Dashboard = props => {
           />
         </View>
         <View style={dashboardStyles.offerSliderContainer}>
-          <Grid data={Array(6).fill(0)} label="Shop By Category" />
+          <Grid data={categoryData} label="Shop By Category" />
         </View>
         <View style={dashboardStyles.offerSliderContainer}>
-          <Slider data={Array(10).fill(0)} label="Best Offers" />
+          <Slider data={offersData} label="Best Offers" />
         </View>
         <View style={dashboardStyles.offerSliderContainer}>
-          <Slider data={Array(10).fill(0)} label="Best Seller" />
+          <Slider data={sellersData} label="Best Seller" />
         </View>
       </ScrollView>
     </SafeAreaView>
