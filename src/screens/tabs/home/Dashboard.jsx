@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   Image,
-  StatusBar
+  StatusBar,
 } from 'react-native';
 import Colors from '../../../utils/Colors';
 import LinearGradient from 'react-native-linear-gradient';
@@ -17,6 +17,7 @@ import {drawerComponentStyles} from '../../drawer/DrawerComponent/DrawerComponen
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Slider from '../../../component/slider/Slider';
+import Grid from '../../../component/grid/Grid';
 
 const Dashboard = props => {
   return (
@@ -64,8 +65,7 @@ const Dashboard = props => {
         </View>
       </View>
       <ScrollView>
-        <View
-          style={dashboardStyles.featuredContainer}>
+        <View style={dashboardStyles.featuredContainer}>
           <Image
             source={{
               uri: 'https://cpimg.tistatic.com/03566177/b/4/Kurkure.jpg',
@@ -75,10 +75,13 @@ const Dashboard = props => {
           />
         </View>
         <View style={dashboardStyles.offerSliderContainer}>
-          <Slider label="Best Offers" />
+          <Grid data={Array(6).fill(0)} label="Shop By Category" />
         </View>
         <View style={dashboardStyles.offerSliderContainer}>
-          <Slider label="Best Seller" />
+          <Slider data={Array(10).fill(0)} label="Best Offers" />
+        </View>
+        <View style={dashboardStyles.offerSliderContainer}>
+          <Slider data={Array(10).fill(0)} label="Best Seller" />
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text, FlatList} from 'react-native';
 import {sliderStyles} from './Slider.styles';
-import Card from '../card/Card';
+import Card from '../card/ItemCard';
 
-const Slider = ({label}) => {
+const Slider = ({label, data}) => {
   const renderItem = () => {
     return (
       <View style={sliderStyles.cardContainer}>
@@ -18,7 +18,7 @@ const Slider = ({label}) => {
       <FlatList
         keyExtractor={(item, index) => index.toString()}
         horizontal
-        data={Array(10).fill(0)}
+        data={data}
         renderItem={renderItem}
       />
     </View>

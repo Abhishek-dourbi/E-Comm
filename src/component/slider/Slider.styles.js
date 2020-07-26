@@ -14,5 +14,6 @@ export const sliderStyles = EStyleSheet.create({
   },
   cardContainer: {
     marginRight: '10rem',
+    marginBottom: '10rem'
   },
 });

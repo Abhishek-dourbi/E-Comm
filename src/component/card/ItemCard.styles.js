@@ -1,7 +1,7 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Colors from '../../utils/Colors';
 
-export const cardStyles = EStyleSheet.create({
+export const itemCardStyles = EStyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.white,

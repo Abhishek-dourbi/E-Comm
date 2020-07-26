@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
-import {cardStyles} from './Card.styles';
+import {itemCardStyles} from './ItemCard.styles';
 import {Dropdown} from 'react-native-material-dropdown-v2';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
@@ -19,7 +19,7 @@ let data = [
   },
 ];
 
-const Card = () => {
+const ItemCard = () => {
   const [option, setOption] = useState('');
 
   const onOptionChange = () => {
@@ -27,26 +27,26 @@ const Card = () => {
   };
 
   return (
-    <View style={cardStyles.container}>
-      <View style={cardStyles.exemptionContainer}>
-        <Text style={cardStyles.exemptionText}>43% {'\n'} Off</Text>
+    <View style={itemCardStyles.container}>
+      <View style={itemCardStyles.exemptionContainer}>
+        <Text style={itemCardStyles.exemptionText}>43% {'\n'} Off</Text>
       </View>
-      <View style={cardStyles.itemContainer}>
-        <View style={cardStyles.imageContainer}>
+      <View style={itemCardStyles.itemContainer}>
+        <View style={itemCardStyles.imageContainer}>
           <Image
             source={{
               uri: 'https://i.dlpng.com/static/png/473319_preview.png',
             }}
-            style={cardStyles.image}
+            style={itemCardStyles.image}
             resizeMode="cover"
           />
         </View>
-        <View style={cardStyles.itemDetailContainer}>
-          <View style={cardStyles.priceContainer}>
-            <Text style={cardStyles.currentPriceText}>₹80.00</Text>
-            <Text style={cardStyles.oldPriceText}>₹120.00</Text>
+        <View style={itemCardStyles.itemDetailContainer}>
+          <View style={itemCardStyles.priceContainer}>
+            <Text style={itemCardStyles.currentPriceText}>₹80.00</Text>
+            <Text style={itemCardStyles.oldPriceText}>₹120.00</Text>
           </View>
-          <Text style={cardStyles.itemLabel}>Toor Dal</Text>
+          <Text style={itemCardStyles.itemLabel}>Toor Dal</Text>
         </View>
       </View>
       <View>
@@ -54,7 +54,7 @@ const Card = () => {
           value={option}
           onChangeOption={onOptionChange}
           data={data}
-          inputContainerStyle={cardStyles.dropDownInputContainer}
+          inputContainerStyle={itemCardStyles.dropDownInputContainer}
           rippleOpacity={0}
           useNativeDriver
           dropdownMargins={{min: 8, max: 16}}
@@ -62,16 +62,16 @@ const Card = () => {
             <View
               style={
                 value
-                  ? cardStyles.dropDownContainer
-                  : cardStyles.dropDownUnselectedContainer
+                  ? itemCardStyles.dropDownContainer
+                  : itemCardStyles.dropDownUnselectedContainer
               }>
               <Text
                 style={
-                  value ? cardStyles.dropDownText : cardStyles.unselectedText
+                  value ? itemCardStyles.dropDownText : itemCardStyles.unselectedText
                 }>
                 {value ? value : 'Qty'}
               </Text>
-              <AntDesign name="caretdown" style={cardStyles.dropDownIcon} />
+              <AntDesign name="caretdown" style={itemCardStyles.dropDownIcon} />
             </View>
           )}
           renderBase={props => (
@@ -79,13 +79,13 @@ const Card = () => {
           )}
         />
       </View>
-      <View style={cardStyles.buttonContainer}>
-        <TouchableOpacity style={cardStyles.cartButton}>
-          <Text style={cardStyles.cartButtonLabel}>Add To Cart</Text>
+      <View style={itemCardStyles.buttonContainer}>
+        <TouchableOpacity style={itemCardStyles.cartButton}>
+          <Text style={itemCardStyles.cartButtonLabel}>Add To Cart</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 };
 
-export default Card;
+export default ItemCard;
