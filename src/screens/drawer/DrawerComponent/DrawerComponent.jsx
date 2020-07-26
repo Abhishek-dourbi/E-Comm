@@ -7,6 +7,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {DrawerContentScrollView} from '@react-navigation/drawer';
+import {navigateScreen} from '../../../utils/NavigationService';
 
 const options = [
   {

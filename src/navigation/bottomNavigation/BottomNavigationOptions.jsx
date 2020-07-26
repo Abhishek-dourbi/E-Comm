@@ -1,34 +1,21 @@
 import React from 'react';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Entypo from 'react-native-vector-icons/Entypo';
+import RoutesEnum from '../../utils/RoutesEnum';
 
 const tabBarIcon = ({focused, color, size}, route, navigation) => {
   switch (route.name) {
-    case 'Home':
+    case RoutesEnum.HomeTab:
       return <FontAwesome name="home" size={size} color={color} />;
-    case 'Search':
+    case RoutesEnum.SearchTab:
       return <AntDesign name="search1" size={size} color={color} />;
-    case 'Categories':
-      return (
-        <Entypo
-          name="grid"
-          size={size}
-          color={color}
-        />
-      );
-    case 'Offers':
-      return (
-        <Fontisto
-          name="shopping-sale"
-          size={size}
-          color={color}
-        />
-      );
-    case 'Cart':
+    case RoutesEnum.CategoriesTab:
+      return <Entypo name="grid" size={size} color={color} />;
+    case RoutesEnum.OffersTab:
+      return <Fontisto name="shopping-sale" size={size} color={color} />;
+    case RoutesEnum.CartTab:
       return <Entypo name="shopping-cart" size={size} color={color} />;
     default:
       return null;
@@ -37,15 +24,15 @@ const tabBarIcon = ({focused, color, size}, route, navigation) => {
 
 const tabBarLabel = route => {
   switch (route.name) {
-    case 'Home':
+    case RoutesEnum.HomeTab:
       return 'Home';
-    case 'Search':
+    case RoutesEnum.SearchTab:
       return 'Search';
-    case 'Offers':
+    case RoutesEnum.OffersTab:
       return 'Offers';
-    case 'Categories':
+    case RoutesEnum.CategoriesTab:
       return 'Categories';
-    case 'Cart':
+    case RoutesEnum.CartTab:
       return 'Cart';
     default:
       return '';

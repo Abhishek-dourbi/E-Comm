@@ -1,6 +1,6 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
-import Colors from '../../../utils/Colors';
-import {GenericStyles} from '../../../utils/GenericStyles';
+import Colors from '../../../../utils/Colors';
+import {GenericStyles} from '../../../../utils/GenericStyles';
 
 export const dashboardStyles = EStyleSheet.create({
   container: {
