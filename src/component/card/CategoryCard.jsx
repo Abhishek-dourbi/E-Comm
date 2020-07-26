@@ -1,10 +1,18 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity} from 'react-native';
 import {categoryCardStyles} from './CategoryCard.styles';
+import {navigateScreen} from '../../utils/NavigationService';
+import RoutesEnum from '../../utils/RoutesEnum';
 
 const CategoryCard = ({data}) => {
+  const onCategoryClicked = () => {
+    navigateScreen(RoutesEnum.ItemList);
+  };
+
   return (
-    <TouchableOpacity style={categoryCardStyles.container}>
+    <TouchableOpacity
+      onPress={onCategoryClicked}
+      style={categoryCardStyles.container}>
       <Image
         source={{
           uri:

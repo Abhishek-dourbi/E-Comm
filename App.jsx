@@ -6,9 +6,8 @@ import {navigationRef, isReadyRef} from './src/utils/NavigationService';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {GenUtils} from './src/utils/GenUtils';
 
-import Colors from './src/utils/Colors';
-import LinearGradient from 'react-native-linear-gradient';
 import {StatusBar} from 'react-native';
+import Gradient from './src/component/gradient/Gradient';
 
 const {width} = GenUtils.getDimension();
 
@@ -25,21 +24,13 @@ const App = () => {
 
   return (
     <>
-      <LinearGradient
-        start={{x: 0, y: 0}}
-        end={{x: 1, y: 0}}
-        colors={[
-          Colors.firstBlueGradientColor,
-          Colors.secondBlueGradientColor,
-          Colors.thirdBlueGradientColor,
-        ]}
-        style={{height}}>
+      <Gradient style={{height}}>
         <StatusBar
           barStyle="light-content"
           translucent={true}
           backgroundColor={'transparent'}
         />
-      </LinearGradient>
+      </Gradient>
       <NavigationContainer
         ref={navigationRef}
         onReady={() => {

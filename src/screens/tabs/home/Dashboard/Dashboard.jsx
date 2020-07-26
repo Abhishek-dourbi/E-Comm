@@ -17,6 +17,7 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Slider from '../../../../component/slider/Slider';
 import Grid from '../../../../component/grid/Grid';
+import Gradient from '../../../../component/gradient/Gradient';
 
 const Dashboard = props => {
   const [categoryData, setCategoryData] = useState([]);
@@ -32,15 +33,7 @@ const Dashboard = props => {
   return (
     <SafeAreaView style={dashboardStyles.container}>
       <View style={dashboardStyles.headerContainer}>
-        <LinearGradient
-          start={{x: 0, y: 0}}
-          end={{x: 1, y: 0}}
-          colors={[
-            Colors.firstBlueGradientColor,
-            Colors.secondBlueGradientColor,
-            Colors.thirdBlueGradientColor,
-          ]}
-          style={dashboardStyles.header}>
+        <Gradient style={dashboardStyles.header}>
           <View style={dashboardStyles.headerLeft}>
             <TouchableOpacity onPress={() => props.navigation.openDrawer()}>
               <Entypo name="menu" style={dashboardStyles.menuIcon} />
@@ -63,7 +56,7 @@ const Dashboard = props => {
               />
             </View>
           </View>
-        </LinearGradient>
+        </Gradient>
         <View style={dashboardStyles.searchContainer}>
           <TextInput
             style={dashboardStyles.searchBar}
