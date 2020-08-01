@@ -14,6 +14,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import {GenericStyles} from '../../../../utils/GenericStyles';
 import {categoryCardStyles} from '../../../../component/card/CategoryCard.styles';
 import Line from '../../../../component/line/Line';
+import ItemCard from '../../../../component/card/ItemCard';
 
 const ItemList = ({navigation}) => {
   navigation.setOptions({
@@ -85,24 +86,40 @@ const ItemList = ({navigation}) => {
     );
   };
 
+  const renderItemCard = () => {
+    return (
+      <>
+        <ItemCard fullCard />
+        <Line style={{marginVertical: 10}} />
+      </>
+    );
+  };
+
   return (
-    <View>
+    <View style={itemListStyles.container}>
+      <View>
+        <FlatList
+          data={Array(6).fill(0)}
+          horizontal
+          renderItem={renderCategoryItem}
+          style={itemListStyles.categoryContainer}
+          showsHorizontalScrollIndicator={false}
+        />
+        <Line width={1} />
+        <FlatList
+          data={Array(6).fill(0)}
+          horizontal
+          renderItem={renderItemFilters}
+          style={itemListStyles.categoryContainer}
+          showsHorizontalScrollIndicator={false}
+        />
+        <Line />
+      </View>
       <FlatList
-        data={Array(6).fill(0)}
-        horizontal
-        renderItem={renderCategoryItem}
-        style={itemListStyles.categoryContainer}
-        showsHorizontalScrollIndicator={false}
+        style={itemListStyles.itemContainer}
+        data={Array(10).fill(0)}
+        renderItem={renderItemCard}
       />
-      <Line width={1} />
-      <FlatList
-        data={Array(6).fill(0)}
-        horizontal
-        renderItem={renderItemFilters}
-        style={itemListStyles.categoryContainer}
-        showsHorizontalScrollIndicator={false}
-      />
-      <Line />
     </View>
   );
 };

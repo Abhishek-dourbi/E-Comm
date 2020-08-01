@@ -2,6 +2,10 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import Colors from '../../../../utils/Colors';
 
 export const itemListStyles = EStyleSheet.create({
+  container: {
+    backgroundColor: Colors.white,
+    flex: 1
+  },
   headerLeftContainer: {
     flexDirection: 'row',
     paddingLeft: '10rem',
@@ -29,7 +33,7 @@ export const itemListStyles = EStyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     borderWidth: '2rem',
-    borderColor: Colors.lightGray,
+    borderColor: Colors.lightGray1,
     marginRight: '10rem',
     borderRadius: '10rem',
     paddingHorizontal: '5rem',
@@ -55,7 +59,7 @@ export const itemListStyles = EStyleSheet.create({
   itemFilter: {
     justifyContent: 'center',
     alignItems: 'center',
-    borderColor: Colors.lightGray,
+    borderColor: Colors.lightGray1,
     borderWidth: '1rem',
     marginRight: '10rem',
     borderRadius: '20rem',
@@ -73,5 +77,9 @@ export const itemListStyles = EStyleSheet.create({
   },
   selectedItemFilterText: {
     color: Colors.secondBlueGradientColor,
+  },
+  itemContainer: {
+    marginVertical: '10rem',
+    flex: 1
   },
 });

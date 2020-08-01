@@ -108,3 +108,88 @@ export const itemCardStyles = EStyleSheet.create({
     fontSize: '16rem',
   },
 });
+
+export const fullItemCardStyles = EStyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: '10rem',
+    paddingVertical: '10rem',
+  },
+  imageContainer: {
+    flex: 1,
+  },
+  image: {
+    width: '100rem',
+    height: '100rem',
+  },
+  detailsContainer: {
+    flex: 2,
+  },
+  itemTitle: {
+    fontSize: '18rem',
+  },
+  offerText: {
+    fontWeight: 'bold',
+    fontSize: '14rem',
+    color: Colors.lightGreen,
+    marginLeft: '20rem',
+  },
+  priceContainer: {
+    flexDirection: 'row',
+    marginVertical: '10rem',
+  },
+  selectionContainer: {
+    marginVertical: '10rem',
+    marginRight: '30rem',
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  dropDownInputContainer: {
+    flex: 1,
+    marginRight: '10rem',
+  },
+  dropDownContainer: {
+    marginHorizontal: 0,
+  },
+  dropDownUnselectedContainer: {
+    marginHorizontal: 0,
+    borderRadius: '5rem',
+  },
+  dropDownText: {
+    fontWeight: '600',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  buttonTextContainer: {
+    paddingHorizontal: '10rem',
+    paddingVertical: '10rem',
+    borderWidth: 1,
+    borderColor: Colors.secondBlueGradientColor,
+    borderTopLeftRadius: '5rem',
+    borderBottomLeftRadius: '5rem',
+  },
+  buttonText: {
+    color: Colors.secondBlueGradientColor,
+    fontSize: '16rem',
+    fontWeight: 'bold',
+  },
+  buttonIconContainer: {
+    borderLeftWidth: 0,
+    backgroundColor: Colors.lightOpcaityBlue,
+    paddingHorizontal: '10rem',
+    paddingVertical: '10rem',
+    borderWidth: 1,
+    borderColor: Colors.secondBlueGradientColor,
+    borderTopRightRadius: '5rem',
+    borderBottomRightRadius: '5rem'
+  },
+  addIcon: {
+    color: Colors.secondBlueGradientColor,
+    fontSize: '17rem',
+  },
+});
