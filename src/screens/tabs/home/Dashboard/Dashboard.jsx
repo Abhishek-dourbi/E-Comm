@@ -9,7 +9,6 @@ import {
   Image,
 } from 'react-native';
 import Colors from '../../../../utils/Colors';
-import LinearGradient from 'react-native-linear-gradient';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {dashboardStyles} from './Dashboard.styles';
 import {drawerComponentStyles} from '../../../drawer/DrawerComponent/DrawerComponent.styles';

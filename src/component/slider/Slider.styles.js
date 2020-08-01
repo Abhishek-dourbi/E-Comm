@@ -1,4 +1,5 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
+import {GenericStyles} from '../../utils/GenericStyles';
 
 export const sliderStyles = EStyleSheet.create({
   container: {
@@ -14,6 +15,7 @@ export const sliderStyles = EStyleSheet.create({
   },
   cardContainer: {
     marginRight: '10rem',
-    marginBottom: '10rem'
+    marginBottom: '10rem',
+    ...GenericStyles.boxShadow,
   },
 });

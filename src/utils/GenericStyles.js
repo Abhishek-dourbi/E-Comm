@@ -4,8 +4,8 @@ import Colors from './Colors';
 export const GenericStyles = EStyleSheet.create({
   boxShadow: {
     shadowOffset: {width: '2rem', height: '2rem'},
-    shadowColor: 'black',
-    shadowOpacity: 0.3,
+    shadowColor: Colors.gray,
+    shadowOpacity: 0.5,
     elevation: '15rem',
   },
   headerIcon: {
