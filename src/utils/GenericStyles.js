@@ -3,7 +3,7 @@ import Colors from './Colors';
 
 export const GenericStyles = EStyleSheet.create({
   boxShadow: {
-    shadowOffset: {width: '2rem', height: '2rem'},
+    shadowOffset: {width: 0, height: '5rem'},
     shadowColor: Colors.gray,
     shadowOpacity: 0.5,
     elevation: '15rem',
