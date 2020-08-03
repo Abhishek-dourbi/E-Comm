@@ -11,6 +11,7 @@ const CategoryCard = ({data}) => {
 
   return (
     <TouchableOpacity
+        activeOpacity={1}
       onPress={onCategoryClicked}
       style={categoryCardStyles.container}>
       <Image

@@ -53,7 +53,7 @@ const Accordion = React.memo(({title, data}) => {
 
   const renderBody = (item, index) => {
     return (
-      <TouchableOpacity onPress={onItemPress} style={accordionStyle.bodyCard}>
+      <TouchableOpacity activeOpacity={1} onPress={onItemPress} style={accordionStyle.bodyCard}>
         <Text style={accordionStyle.bodyCardTitle}>{item.title}</Text>
         <MaterialIcons
           name="keyboard-arrow-right"
