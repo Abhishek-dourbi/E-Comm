@@ -17,6 +17,11 @@ export default {
     secondYellowGradientColor: '#ebdc34',
   },
 
+  greenGradient: {
+    firstColor: '#56ab2f',
+    secondColor: '#a8e063',
+  },
+
   lightYellow: '#fff9b6',
   lightGreen: '#10cd00',
 
