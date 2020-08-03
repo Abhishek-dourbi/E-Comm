@@ -1,13 +1,12 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
 import {drawerComponentStyles} from './DrawerComponent.styles';
-import LinearGradient from 'react-native-linear-gradient';
 import Colors from '../../../utils/Colors';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {DrawerContentScrollView} from '@react-navigation/drawer';
-import {navigateScreen} from '../../../utils/NavigationService';
+import Gradient from '../../../component/gradient/Gradient';
 
 const options = [
   {
@@ -41,15 +40,7 @@ const DrawerComponent = props => {
     <DrawerContentScrollView
       contentContainerStyle={drawerComponentStyles.drawer}
       {...props}>
-      <LinearGradient
-        start={{x: 0, y: 0}}
-        end={{x: 1, y: 0}}
-        colors={[
-          Colors.firstBlueGradientColor,
-          Colors.secondBlueGradientColor,
-          Colors.thirdBlueGradientColor,
-        ]}
-        style={drawerComponentStyles.optionContainer}>
+      <Gradient style={drawerComponentStyles.optionContainer}>
         <View style={drawerComponentStyles.optionInfo}>
           <View style={drawerComponentStyles.userIconContainer}>
             <Fontisto
@@ -66,7 +57,7 @@ const DrawerComponent = props => {
         <View style={drawerComponentStyles.optionBtnContainer}>
           <AntDesign name="right" style={drawerComponentStyles.forwardIcon} />
         </View>
-      </LinearGradient>
+      </Gradient>
       <View style={drawerComponentStyles.locationContainer}>
         <Entypo name="location" style={drawerComponentStyles.locationIcon} />
         <View style={drawerComponentStyles.locationTextContainer}>
@@ -88,16 +79,14 @@ const DrawerComponent = props => {
             </View>
             <View style={drawerComponentStyles.optionBtnContainer}>
               {ele.label === 'My Orders' ? (
-                <LinearGradient
-                  start={{x: 0, y: 0}}
-                  end={{x: 1, y: 0}}
+                <Gradient
                   colors={[
-                    Colors.firstYellowGradientColor,
-                    Colors.secondYellowGradientColor,
+                    Colors.yellowGradient.firstYellowGradientColor,
+                    Colors.yellowGradient.secondYellowGradientColor,
                   ]}
                   style={drawerComponentStyles.orderContainer}>
                   <Text style={drawerComponentStyles.orderText}>0</Text>
-                </LinearGradient>
+                </Gradient>
               ) : (
                 <AntDesign
                   name="right"

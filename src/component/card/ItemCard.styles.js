@@ -60,7 +60,7 @@ export const itemCardStyles = EStyleSheet.create({
     width: '100%',
   },
   cartButton: {
-    backgroundColor: Colors.secondBlueGradientColor,
+    backgroundColor: Colors.themeGradient.secondBlueGradientColor,
     paddingVertical: '10rem',
     paddingHorizontal: '10rem',
     borderBottomLeftRadius: '10rem',
@@ -169,12 +169,12 @@ export const fullItemCardStyles = EStyleSheet.create({
     paddingHorizontal: '10rem',
     paddingVertical: '10rem',
     borderWidth: 1,
-    borderColor: Colors.secondBlueGradientColor,
+    borderColor: Colors.themeGradient.secondBlueGradientColor,
     borderTopLeftRadius: '5rem',
     borderBottomLeftRadius: '5rem',
   },
   buttonText: {
-    color: Colors.secondBlueGradientColor,
+    color: Colors.themeGradient.secondBlueGradientColor,
     fontSize: '16rem',
     fontWeight: 'bold',
   },
@@ -184,7 +184,7 @@ export const fullItemCardStyles = EStyleSheet.create({
     paddingHorizontal: '10rem',
     paddingVertical: '10rem',
     borderWidth: 1,
-    borderColor: Colors.secondBlueGradientColor,
+    borderColor: Colors.themeGradient.secondBlueGradientColor,
     borderTopRightRadius: '5rem',
     borderBottomRightRadius: '5rem'
   },

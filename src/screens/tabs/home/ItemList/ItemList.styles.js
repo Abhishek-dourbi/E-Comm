@@ -40,7 +40,7 @@ export const itemListStyles = EStyleSheet.create({
     width: '150rem',
   },
   selectedCategoryCard: {
-    borderColor: Colors.secondBlueGradientColor,
+    borderColor: Colors.themeGradient.secondBlueGradientColor,
   },
   categoryImage: {
     width: '70rem',
@@ -54,7 +54,7 @@ export const itemListStyles = EStyleSheet.create({
     fontWeight: '500',
   },
   selectedCategoryText: {
-    color: Colors.secondBlueGradientColor,
+    color: Colors.themeGradient.secondBlueGradientColor,
   },
   itemFilter: {
     justifyContent: 'center',
@@ -68,7 +68,7 @@ export const itemListStyles = EStyleSheet.create({
   },
   selectedItemFilter: {
     backgroundColor: Colors.lightOpcaityBlue,
-    borderColor: Colors.secondBlueGradientColor,
+    borderColor: Colors.themeGradient.secondBlueGradientColor,
   },
   itemFilterText: {
     color: Colors.black,
@@ -76,7 +76,7 @@ export const itemListStyles = EStyleSheet.create({
     fontWeight: '500',
   },
   selectedItemFilterText: {
-    color: Colors.secondBlueGradientColor,
+    color: Colors.themeGradient.secondBlueGradientColor,
   },
   itemContainer: {
     marginVertical: '10rem',

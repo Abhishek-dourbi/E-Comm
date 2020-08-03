@@ -4,7 +4,7 @@ import {GenericStyles} from '../../utils/GenericStyles';
 
 export const categoryCardStyles = EStyleSheet.create({
   container: {
-    backgroundColor: Colors.firstYellowGradientColor,
+    backgroundColor: Colors.yellowGradient.firstYellowGradientColor,
     borderRadius: '15rem',
     justifyContent: 'center',
     alignItems: 'center',
