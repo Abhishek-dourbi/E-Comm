@@ -13,6 +13,8 @@ import Gradient from '../gradient/Gradient';
 import Colors from '../../utils/Colors';
 import {GenUtils} from '../../utils/GenUtils';
 import {GenericStyles} from '../../utils/GenericStyles';
+import {navigateScreen} from '../../utils/NavigationService';
+import RoutesEnum from '../../utils/RoutesEnum';
 
 const Accordion = ({title, data}) => {
   const [open, setOpen] = useState(false);
@@ -46,11 +48,25 @@ const Accordion = ({title, data}) => {
     setOpen(!open);
   };
 
+  const onItemPress = () => {
+    navigateScreen(RoutesEnum.ItemList);
+  };
+
+  const renderBody = (item, index) => {
+    return (
+      <TouchableOpacity onPress={onItemPress} style={accordionStyle.bodyCard}>
+        <Text style={accordionStyle.bodyCardTitle}>{item.title}</Text>
+        <MaterialIcons
+          name="keyboard-arrow-right"
+          style={accordionStyle.forwardIcon}
+        />
+      </TouchableOpacity>
+    );
+  };
+
   return (
     <>
-      <TouchableOpacity
-        activeOpacity={1}
-        onPress={() => toggleListItem()}>
+      <TouchableOpacity activeOpacity={1} onPress={() => toggleListItem()}>
         <Gradient
           colors={[...GenUtils.getGradientColors(Colors.greenGradient)]}
           style={[
@@ -85,9 +101,7 @@ const Accordion = ({title, data}) => {
           onLayout={event => {
             setBodySectionHeight(event.nativeEvent.layout.height);
           }}>
-          {data.map(() => (
-            <Text>Hello</Text>
-          ))}
+          {data.map(renderBody)}
         </View>
       </Animated.View>
     </>

@@ -41,7 +41,11 @@ const Categories = () => {
 
   return (
     <View style={categoriesStyles.container}>
-      <FlatList data={data} renderItem={renderItem} showsVerticalScrollIndicator={false} />
+      <FlatList
+        data={data}
+        renderItem={renderItem}
+        showsVerticalScrollIndicator={false}
+      />
     </View>
   );
 };

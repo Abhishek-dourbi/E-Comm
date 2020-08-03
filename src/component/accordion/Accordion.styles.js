@@ -3,8 +3,9 @@ import Colors from '../../utils/Colors';
 
 export const accordionStyle = EStyleSheet.create({
   bodyBackground: {
-    backgroundColor: '#EFEFEF',
+    backgroundColor: Colors.white,
     overflow: 'hidden',
+    marginHorizontal: '10rem',
   },
   accordion: {
     flexDirection: 'row',
@@ -29,6 +30,7 @@ export const accordionStyle = EStyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingRight: '10rem',
   },
   title: {
     color: Colors.white,
@@ -46,5 +48,23 @@ export const accordionStyle = EStyleSheet.create({
     paddingLeft: '1.5rem',
     position: 'absolute',
     bottom: 0,
+    width: '100%',
+  },
+  bodyCard: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flex: 1,
+    paddingVertical: '10rem',
+    paddingHorizontal: '15rem',
+  },
+  bodyCardTitle: {
+    fontSize: '16rem',
+    color: Colors.black,
+    fontWeight: '500',
+  },
+  forwardIcon: {
+    fontSize: '20rem',
+    color: Colors.black,
   },
 });
