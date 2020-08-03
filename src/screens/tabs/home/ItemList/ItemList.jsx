@@ -90,7 +90,7 @@ const ItemList = ({navigation}) => {
     return (
       <>
         <ItemCard fullCard />
-        <Line style={{marginVertical: 10}} />
+        <Line style={itemListStyles.lineBreak} />
       </>
     );
   };

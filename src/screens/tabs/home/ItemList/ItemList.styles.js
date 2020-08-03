@@ -4,7 +4,7 @@ import Colors from '../../../../utils/Colors';
 export const itemListStyles = EStyleSheet.create({
   container: {
     backgroundColor: Colors.white,
-    flex: 1
+    flex: 1,
   },
   headerLeftContainer: {
     flexDirection: 'row',
@@ -80,6 +80,9 @@ export const itemListStyles = EStyleSheet.create({
   },
   itemContainer: {
     marginVertical: '10rem',
-    flex: 1
+    flex: 1,
+  },
+  lineBreak: {
+    marginVertical: '10rem',
   },
 });

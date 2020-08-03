@@ -143,7 +143,6 @@ export const fullItemCardStyles = EStyleSheet.create({
     marginVertical: '10rem',
     marginRight: '30rem',
     flexDirection: 'row',
-    alignItems: 'center',
     flex: 1,
   },
   dropDownInputContainer: {
@@ -172,10 +171,12 @@ export const fullItemCardStyles = EStyleSheet.create({
     borderColor: Colors.themeGradient.secondBlueGradientColor,
     borderTopLeftRadius: '5rem',
     borderBottomLeftRadius: '5rem',
+    height: '100%',
+    justifyContent: 'center',
   },
   buttonText: {
     color: Colors.themeGradient.secondBlueGradientColor,
-    fontSize: '16rem',
+    fontSize: '15rem',
     fontWeight: 'bold',
   },
   buttonIconContainer: {
@@ -186,7 +187,9 @@ export const fullItemCardStyles = EStyleSheet.create({
     borderWidth: 1,
     borderColor: Colors.themeGradient.secondBlueGradientColor,
     borderTopRightRadius: '5rem',
-    borderBottomRightRadius: '5rem'
+    borderBottomRightRadius: '5rem',
+    height: '100%',
+    justifyContent: 'center',
   },
   addIcon: {
     color: Colors.secondBlueGradientColor,

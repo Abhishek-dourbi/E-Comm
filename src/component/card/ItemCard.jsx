@@ -95,8 +95,7 @@ const ItemCard = ({fullCard}) => {
             <View style={fullItemCardStyles.buttonTextContainer}>
               <Text style={fullItemCardStyles.buttonText}>Add Item</Text>
             </View>
-            <View
-              style={fullItemCardStyles.buttonIconContainer}>
+            <View style={fullItemCardStyles.buttonIconContainer}>
               <AntDesign name="plus" style={fullItemCardStyles.addIcon} />
             </View>
           </TouchableOpacity>

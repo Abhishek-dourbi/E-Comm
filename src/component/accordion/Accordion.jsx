@@ -12,11 +12,10 @@ import {accordionStyle} from './Accordion.styles';
 import Gradient from '../gradient/Gradient';
 import Colors from '../../utils/Colors';
 import {GenUtils} from '../../utils/GenUtils';
-import {GenericStyles} from '../../utils/GenericStyles';
 import {navigateScreen} from '../../utils/NavigationService';
 import RoutesEnum from '../../utils/RoutesEnum';
 
-const Accordion = ({title, data}) => {
+const Accordion = React.memo(({title, data}) => {
   const [open, setOpen] = useState(false);
   const animatedController = useRef(new Animated.Value(0)).current;
   const [bodySectionHeight, setBodySectionHeight] = useState(0);
@@ -106,5 +105,5 @@ const Accordion = ({title, data}) => {
       </Animated.View>
     </>
   );
-};
+});
 export default Accordion;
